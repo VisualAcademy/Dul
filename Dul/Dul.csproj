@@ -6,6 +6,9 @@
     <Company>VisualAcademy</Company>
     <Description>Development Utility Library</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/VisualAcademy/Dul</PackageProjectUrl>
+    <PackageTags>C#, .NET Standard</PackageTags>
+    <Version>1.0.2</Version>
   </PropertyGroup>
 
 </Project>
