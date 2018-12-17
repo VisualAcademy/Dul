@@ -8,11 +8,11 @@
         /// <param name="strCut">원본 문자열</param>
         /// <param name="intChar">잘라낼 길이</param>
         /// <returns>안녕하세요. => 안녕...</returns>
-        public static string CutString(this string strCut, int intChar)
+        public static string CutString(this string strCut, int intChar, string suffix = "...")
         {
             if (strCut.Length > (intChar - 3))
             {
-                return strCut.Substring(0, intChar - 3) + "...";
+                return strCut.Substring(0, intChar - 3) + "" + suffix;
             }
             return strCut;
         }
@@ -23,7 +23,7 @@
         /// <param name="str">한글, 영문, 유니코드 문자열</param>
         /// <param name="length">자를 문자열의 길이</param>
         /// <returns>잘라진 문자열</returns>
-        public static string CutStringUnicode(this string str, int length)
+        public static string CutStringUnicode(this string str, int length, string suffix = "...")
         {
             string result = str;
 
@@ -32,7 +32,7 @@
 
             if (l > (length - 3))
             {
-                result = si.SubstringByTextElements(0, length - 3) + "...";
+                result = si.SubstringByTextElements(0, length - 3) + "" + suffix;
             }
 
             return result;
