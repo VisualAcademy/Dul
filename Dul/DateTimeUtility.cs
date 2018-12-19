@@ -14,5 +14,27 @@ namespace Dul
         {
             return (new DateTime(2019, 1, 1, 0, 0, 0)).AddHours(--number);
         }
+
+        /// <summary>
+        /// 날짜 형식이 오늘 날짜면 시간 표시 다르면 날짜 표시
+        /// </summary>
+        public static string ShowTimeOrDate(object dt, string format = "yyyy-MM-dd")
+        {
+            if (dt != null && DateTime.TryParse(dt.ToString(), out DateTime dateTime))
+            {
+                if (dateTime.Date == DateTime.Now.Date)
+                {
+                    return dateTime.ToString("hh:mm:ss");
+                }
+                else
+                {
+                    return dateTime.ToString(format); // "yyyy-MM-dd" || "yy-MM-dd"
+                }
+            }
+            else
+            {
+                return "";
+            }
+        }
     }
 }
