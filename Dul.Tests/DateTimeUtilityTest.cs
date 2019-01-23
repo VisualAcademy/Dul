@@ -27,5 +27,15 @@ namespace Dul.Tests
             // yy-MM-dd 형태
             Console.WriteLine(DateTimeUtility.ShowTimeOrDate(prev, "yy-MM-dd"));
         }
+
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethod]
+        public void GetYearlyHourByDateTime_Test()
+        {
+            //var last = DateTimeUtility.GetYearlyHourByDateTime(12, 31, 23);
+            //Assert.AreEqual(8760, last);
+
+            var last = DateTimeUtility.GetYearlyHourByDateTime(1, 1, 0);
+            Assert.AreEqual(1, last);
+        }
     }
 }

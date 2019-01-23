@@ -16,6 +16,18 @@ namespace Dul
         }
 
         /// <summary>
+        /// 특정 월/일/시에 대한 년간 시간 값을 반환: 8760 시간만 다루기 
+        /// </summary>
+        public static int GetYearlyHourByDateTime(int month, int day, int hour)
+        {
+            int yearlyHour = 0;
+
+            yearlyHour = (int)(new DateTime(2019, month, day, hour, 0, 0) - new DateTime(2019, 1, 1, 0, 0, 0)).TotalHours;
+
+            return ++yearlyHour; 
+        }
+        
+        /// <summary>
         /// 날짜 형식이 오늘 날짜면 시간 표시 다르면 날짜 표시
         /// </summary>
         public static string ShowTimeOrDate(object dt, string format = "yyyy-MM-dd")
