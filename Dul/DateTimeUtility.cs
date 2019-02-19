@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Dul
 {
@@ -47,6 +48,36 @@ namespace Dul
             {
                 return "";
             }
+        }
+
+        /// <summary>
+        /// 1부터 12까지의 키 값을 갖는 빈 컬렉션 반환
+        /// </summary>
+        public static SortedList<int, double> GetTwelveMonthEmptyCollection()
+        {
+            SortedList<int, double> months = new SortedList<int, double>();
+
+            for (int i = 1; i <= 12; i++)
+            {
+                months.Add(i, 0.0); // 키는 유일한 값
+            }
+
+            return months;
+        }
+
+        /// <summary>
+        /// 1부터 8760까지의 키 값을 갖는 빈 컬렉션 반환
+        /// </summary>
+        public static SortedList<int, double> GetOneYear8760TimeEmptyCollection()
+        {
+            SortedList<int, double> oneYear = new SortedList<int, double>();
+
+            for (int i = 1; i <= 8760; i++)
+            {
+                oneYear.Add(i, 0.0); // 키는 유일한 값
+            }
+
+            return oneYear;
         }
     }
 }
