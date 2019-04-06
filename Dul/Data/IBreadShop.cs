@@ -9,7 +9,7 @@ namespace Dul.Data
     public interface IBreadShop<T> where T : class
     {
         /// <summary>
-        /// 상세
+        /// 상세보기 
         /// </summary>
         T Browse(int id);
 
