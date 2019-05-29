@@ -196,6 +196,21 @@ namespace Dul
                 return "-";
             }
         }
+        public static string FuncFileDownSingle(int id, string strFileName, string strFileSize, string folder, string file)
+        {
+            if (strFileName.Length > 0)
+            {
+                return "<a href=\"/" + folder + "" + file + "?Id="
+                    + id.ToString() + "\">"
+                    + DownloadType(strFileName, strFileName + "("
+                    + ConvertToFileSize(Convert.ToInt32(strFileSize)) + ")")
+                    + "</a>";
+            }
+            else
+            {
+                return "-";
+            }
+        }
         #endregion
 
         #region DownloadType() 함수
