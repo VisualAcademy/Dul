@@ -18,6 +18,11 @@
         /// <summary>
         /// 글 답변 페이지
         /// </summary>
-        Reply
+        Reply,
+
+        /// <summary>
+        /// 기본 페이지
+        /// </summary>
+        None
     }
 }
