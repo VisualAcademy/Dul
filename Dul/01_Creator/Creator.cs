@@ -5,9 +5,6 @@
     /// </summary>
     public class Creator
     {
-        public static string GetName()
-        {
-            return "RedPlus";
-        }
+        public static string GetName() => "RedPlus";
     }
 }
