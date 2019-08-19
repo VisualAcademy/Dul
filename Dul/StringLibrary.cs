@@ -3,7 +3,7 @@
     public static class StringLibrary
     {
         /// <summary>
-        /// 주어진 문자열을 주어진 길이만큼만 잘라서 반환. 나머지 부분은 '...'을 붙임.
+        /// 주어진 문자열을 주어진 길이만큼만 잘라서 반환, 나머지 부분은 '...'을 붙임
         /// </summary>
         /// <param name="strCut">원본 문자열</param>
         /// <param name="intChar">잘라낼 길이</param>
