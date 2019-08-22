@@ -45,7 +45,8 @@ namespace Dul
         {
             int yearlyHour = 0;
 
-            yearlyHour = (int)(new DateTime(2019, month, day, hour, 0, 0) - new DateTime(2019, 1, 1, 0, 0, 0)).TotalHours;
+            yearlyHour = (int)(new DateTime(2019, month, day, hour, 0, 0) 
+                - new DateTime(2019, 1, 1, 0, 0, 0)).TotalHours;
 
             return ++yearlyHour; 
         }        
