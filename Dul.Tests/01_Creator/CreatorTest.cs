@@ -9,7 +9,7 @@ namespace Dul.Tests
         public void GetNameTest()
         {
             //[1] Arrange, Setup
-            var expected = "RedPlus";
+            const string expected = "RedPlus";
 
             //[2] Act, Execute
             var actual = Creator.GetName();

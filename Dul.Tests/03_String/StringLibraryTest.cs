@@ -8,13 +8,13 @@ namespace Dul.Tests
         [TestMethod]
         public void CutStringTest()
         {
-            //[1] Arrange
+            //[1] Arrange, Setup
             var expected = "안녕하...";
 
-            //[2] Act
+            //[2] Act, Execute
             var actual = "안녕하세요.".CutStringUnicode(6);
 
-            //[3] Assert
+            //[3] Assert, Verify
             Assert.AreEqual(expected, actual);
         }
     }
