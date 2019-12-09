@@ -24,7 +24,7 @@ namespace Dul
                 strTemp = strTemp.Replace(">", "&gt;");
                 strTemp = strTemp.Replace("<", "&lt;");
                 //strTemp = strTemp.Replace("\r\n", "<br />");
-                strTemp = strTemp.Replace("\n", "<br />"); // TODO:
+                strTemp = strTemp.Replace("\n", "<br />"); // \r\n 최근 브라우저 인식 오류
                 strTemp = strTemp.Replace("\"", "&#34;");
             }
             return strTemp;
