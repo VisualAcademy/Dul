@@ -23,7 +23,8 @@ namespace Dul
                 strTemp = strTemp.Replace("&", "&amp;");
                 strTemp = strTemp.Replace(">", "&gt;");
                 strTemp = strTemp.Replace("<", "&lt;");
-                strTemp = strTemp.Replace("\r\n", "<br />");
+                //strTemp = strTemp.Replace("\r\n", "<br />");
+                strTemp = strTemp.Replace("\n", "<br />"); // TODO:
                 strTemp = strTemp.Replace("\"", "&#34;");
             }
             return strTemp;
