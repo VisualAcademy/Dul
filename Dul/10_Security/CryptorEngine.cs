@@ -121,7 +121,7 @@ namespace Dul.Security
         }
 
         /// <summary>
-        /// SHA256 암호화( 256 Bit 암호화)
+        /// SHA256 암호화(256 Bit 암호화)
         /// </summary>
         private string SHA256Hash(string Data)
         {
