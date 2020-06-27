@@ -8,7 +8,7 @@ namespace Dul.Articles
     /// </summary>
     /// <typeparam name="T">모델 클래스 형식</typeparam>
     /// <typeparam name="TIdentifier">식별자 형식</typeparam>
-    public interface ICrudRepositoryBase<T, TIdentifier>
+    public interface ICrudRepositoryBase<T, TIdentifier> where T : class 
     {
         Task<T> AddAsync(T model); // 입력
         Task<List<T>> GetAllAsync(); // 출력
