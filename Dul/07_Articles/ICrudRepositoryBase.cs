@@ -30,7 +30,7 @@ namespace Dul.Articles
     /// </summary>
     /// <typeparam name="T">모델 클래스 형식</typeparam>
     /// <typeparam name="V">Id 형식: int or long</typeparam>
-    /// <typeparam name="TIdentifier">부모 식별자 형식</typeparam>
+    /// <typeparam name="TIdentifier">식별자 형식</typeparam>
     public interface ICrudRepositoryBase<T, V, TIdentifier> where T : class
     {
         Task<T> AddAsync(T model); // 입력

@@ -15,7 +15,7 @@ namespace Dul.Articles
         public IEnumerable<T> Items { get; set; }
 
         /// <summary>
-        /// 아티클 수: 현재 앱의 지정된 조건에 맞는 레코드 수
+        /// 아티클 수: 현재 앱의 지정된 컬렉션의 레코드 수
         /// </summary>
         public V TotalCount { get; set; }
 
