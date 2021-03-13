@@ -1,4 +1,4 @@
-﻿namespace Dul.Enums
+﻿namespace Dul
 {
     public enum Roles
     {
