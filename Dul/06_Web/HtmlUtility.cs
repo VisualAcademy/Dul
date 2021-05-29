@@ -48,3 +48,51 @@ namespace Dul
         #endregion
     }
 }
+
+//#region 글의 내용(Content) 출력 부분
+//string strContent = "";
+//switch (Encoding)
+//{
+//    case "Text/HTML":
+
+//        strContent = Content; //.Replace("<" + "%","&lt%").Replace("%" + ">", "%&gt").Replace("<!--", "&lt!--").Replace("-->", "--&gt");
+//        Response.Write(strContent);
+//        break;
+
+//    case "Plain-Text":
+
+//        // 검색 필드가 Content이면, 검색 쿼리를 다른 색으로 보여준다.
+//        if (Request["SearchField"] == "Content")
+//        {
+//            strContent = Dul.HtmlUtility.EncodeWithTabAndSpace(Content).Replace(Request["SearchQuery"], "<span style='color:#ff5555;'>" + Request["SearchQuery"] + "</span>");
+//            Response.Write(strContent);
+//        }
+//        else
+//        {
+//            strContent = Content;
+//            Response.Write(Dul.HtmlUtility.EncodeWithTabAndSpace(strContent));
+//        }
+//        break;
+
+//    case "Mixed-Text":
+
+//        strContent = Content.Replace("<" + "%", "&lt;%").Replace("%" + ">", "%&gt;").Replace("<!--", "&lt!--").Replace("-->", "--&gt").Replace("\n", "<br />").Replace("\t", "&nbsp;&nbsp;&nbsp;&nbsp;").Replace(" " + " ", "&nbsp;&nbsp;");
+//        Response.Write(strContent);
+//        break;
+
+//    default:
+
+//        // 검색 필드가 Content이면, 검색 쿼리를 다른 색으로 보여준다.
+//        if (Request["SearchField"] == "Content")
+//        {
+//            strContent = Dul.HtmlUtility.EncodeWithTabAndSpace(Content).Replace(Request["SearchQuery"], "<span style='color:#ff5555;'>" + Request["SearchQuery"] + "</span>");
+//            Response.Write(strContent);
+//        }
+//        else
+//        {
+//            strContent = Content;
+//            Response.Write(Dul.HtmlUtility.EncodeWithTabAndSpace(strContent));
+//        }
+
+//        break;
+//}
