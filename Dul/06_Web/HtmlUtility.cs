@@ -35,6 +35,7 @@ namespace Dul
         /// <summary>
         /// HTML을 실행하지 않고 소스 그대로 표현해서 바로 웹 페이지에 보여줌
         /// 추가적으로 탭과 공백도 HTML 코드로 처리해서 출력
+        /// 예) 게시판의 이름, 제목 등에서 HTML 사용 금지
         /// </summary>
         /// <param name="strContent">HTML 태그가 포함된 문자열</param>
         /// <returns>태그가 인코드되어 소스 그대로 표현될 문자열</returns>
