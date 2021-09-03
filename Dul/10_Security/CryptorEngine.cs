@@ -95,13 +95,15 @@ namespace Dul.Security
             return UTF8Encoding.UTF8.GetString(resultArray);
         }
 
+        #region string EncryptPassword(string password): 단방향 암호화(복호화 불가능)
         /// <summary>
         /// 단방향 암호화: 복호화 불가능
         /// </summary>
         public string EncryptPassword(string password)
         {
-            return SHA256Hash(MD5Hash(password)); 
-        }
+            return SHA256Hash(MD5Hash(password));
+        } 
+        #endregion
 
         #region string MD5Hash(string data): MD5 암호화(128 Bit 암호화)
         /// <summary>
