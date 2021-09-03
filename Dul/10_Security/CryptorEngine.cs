@@ -103,13 +103,14 @@ namespace Dul.Security
             return SHA256Hash(MD5Hash(password)); 
         }
 
+        #region string MD5Hash(string data): MD5 암호화(128 Bit 암호화)
         /// <summary>
         /// MD5 암호화(128 Bit 암호화)
         /// </summary>
-        private string MD5Hash(string Data)
+        private string MD5Hash(string toEncrypt)
         {
             MD5 md5 = new MD5CryptoServiceProvider();
-            byte[] hash = md5.ComputeHash(Encoding.ASCII.GetBytes(Data));
+            byte[] hash = md5.ComputeHash(Encoding.ASCII.GetBytes(toEncrypt));
 
             StringBuilder stringBuilder = new StringBuilder();
             foreach (byte b in hash)
@@ -119,15 +120,17 @@ namespace Dul.Security
 
             return stringBuilder.ToString();
         }
+        #endregion
 
+        #region string SHA256Hash(string toEncrypt): SHA256 암호화(256 Bit 암호화)
         /// <summary>
         /// SHA256 암호화(256 Bit 암호화)
         /// </summary>
-        private string SHA256Hash(string Data)
+        private string SHA256Hash(string toEncrypt)
         {
             SHA256 sha = new SHA256Managed();
 
-            byte[] hash = sha.ComputeHash(Encoding.ASCII.GetBytes(Data));
+            byte[] hash = sha.ComputeHash(Encoding.ASCII.GetBytes(toEncrypt));
 
             StringBuilder stringBuilder = new StringBuilder();
 
@@ -137,6 +140,7 @@ namespace Dul.Security
             }
 
             return stringBuilder.ToString();
-        }
+        } 
+        #endregion
     }
 }
