@@ -6,6 +6,18 @@ Development Utility Library
 
 Dul 이름으로 NuGet 패키지에 공개된 소스에 대한 프로젝트 경로입니다.
 
+다음 강의에서 주로 사용됩니다.
+
+* C# 교과서
+* ASP.NET & Core를 다루는 기술
+* Blazor Server Fundamentals
+
+다음 프로젝트 소스에서 기본으로 사용됩니다.
+
+* https://github.com/VisualAcademy/DotNetNote
+* https://github.com/VisualAcademy/Hawaso 
+
+
 ## C# 교과서와 ASP.NET & Core를 다루는 기술 데모 소스
 
 Dul 패키지는 C# 교과서 책과 ASP.NET & Core를 다루는 기술 책에서 사용됩니다.
