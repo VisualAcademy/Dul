@@ -29,12 +29,15 @@
         {
             string result = str;
 
-            var si = new System.Globalization.StringInfo(str);
-            var l = si.LengthInTextElements;
-
-            if (l > (length - 3))
+            if (length > 4) // 마이너스 값 들어오는 경우 제외 
             {
-                result = si.SubstringByTextElements(0, length - 3) + "" + suffix;
+                var si = new System.Globalization.StringInfo(str);
+                var l = si.LengthInTextElements;
+
+                if (l > (length - 3))
+                {
+                    result = si.SubstringByTextElements(0, length - 3) + "" + suffix;
+                } 
             }
 
             return result;
