@@ -22,7 +22,9 @@ Dul 이름으로 NuGet 패키지에 공개된 소스에 대한 프로젝트 경�
 
 Dul 패키지는 C# 교과서 책과 ASP.NET & Core를 다루는 기술 책에서 사용됩니다.
 
+## Dul.Web.PagerBase
 
+페이저 컨트롤/컴포넌트에서 사용되는 기본 모델 클래스입니다.
 
 ## AuditableBase 클래스: Dul.Domain.Common.AuditableBase
 
