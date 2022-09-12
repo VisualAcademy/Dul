@@ -16,13 +16,12 @@ namespace Dul.Articles
         Task<bool> UpdateAsync(T model); // 수정
         Task<bool> DeleteAsync(TIdentifier id); // 삭제
         // 필터링 
-        Task<ArticleSet<T, int>> GetArticlesAsync<TParentIdentifier>(
-            int pageIndex,
-            int pageSize,
-            string searchField,
-            string searchQuery,
-            string sortOrder,
-            TParentIdentifier parentIdentifier);
+        Task<ArticleSet<T, int>> GetArticlesAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier);
+
+        /// <summary>
+        /// 필터링 관련 메서드 이름 추가: GetArticlesAsync 메서드와 동일 구조 
+        /// </summary>
+        Task<ArticleSet<T, int>> GetAllAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier);
     }
 
     /// <summary>
@@ -39,12 +38,11 @@ namespace Dul.Articles
         Task<bool> UpdateAsync(T model); // 수정
         Task<bool> DeleteAsync(TIdentifier id); // 삭제
         // 필터링 
-        Task<ArticleSet<T, V>> GetArticlesAsync<TParentIdentifier>(
-            int pageIndex,
-            int pageSize,
-            string searchField,
-            string searchQuery,
-            string sortOrder,
-            TParentIdentifier parentIdentifier);
+        Task<ArticleSet<T, V>> GetArticlesAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier);
+
+        /// <summary>
+        /// 필터링 관련 메서드 이름 추가: GetArticlesAsync 메서드와 동일 구조 
+        /// </summary>
+        Task<ArticleSet<T, V>> GetAllAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier);
     }
 }
