@@ -10,12 +10,34 @@ namespace Dul.Articles
     /// <typeparam name="TIdentifier">부모 식별자 형식</typeparam>
     public interface ICrudRepositoryBase<T, TIdentifier> where T : class
     {
-        Task<T> AddAsync(T model); // 입력
-        Task<List<T>> GetAllAsync(); // 출력
-        Task<T> GetByIdAsync(TIdentifier id); // 상세
-        Task<bool> UpdateAsync(T model); // 수정
-        Task<bool> DeleteAsync(TIdentifier id); // 삭제
-        // 필터링 
+        /// <summary>
+        /// 입력
+        /// </summary>
+        Task<T> AddAsync(T model);
+
+        /// <summary>
+        /// 출력
+        /// </summary>
+        Task<List<T>> GetAllAsync();
+
+        /// <summary>
+        /// 상세
+        /// </summary>
+        Task<T> GetByIdAsync(TIdentifier id);
+
+        /// <summary>
+        /// 수정
+        /// </summary>
+        Task<bool> UpdateAsync(T model);
+
+        /// <summary>
+        /// 삭제
+        /// </summary>
+        Task<bool> DeleteAsync(TIdentifier id);
+
+        /// <summary>
+        /// 필터링
+        /// </summary>
         Task<ArticleSet<T, int>> GetArticlesAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier);
 
         /// <summary>
@@ -32,12 +54,34 @@ namespace Dul.Articles
     /// <typeparam name="TIdentifier">식별자 형식</typeparam>
     public interface ICrudRepositoryBase<T, V, TIdentifier> where T : class
     {
-        Task<T> AddAsync(T model); // 입력
-        Task<List<T>> GetAllAsync(); // 출력
-        Task<T> GetByIdAsync(TIdentifier id); // 상세
-        Task<bool> UpdateAsync(T model); // 수정
-        Task<bool> DeleteAsync(TIdentifier id); // 삭제
-        // 필터링 
+        /// <summary>
+        /// 입력
+        /// </summary>
+        Task<T> AddAsync(T model);
+
+        /// <summary>
+        /// 출력
+        /// </summary>
+        Task<List<T>> GetAllAsync();
+
+        /// <summary>
+        /// 상세
+        /// </summary>
+        Task<T> GetByIdAsync(TIdentifier id);
+
+        /// <summary>
+        /// 수정
+        /// </summary>
+        Task<bool> UpdateAsync(T model);
+
+        /// <summary>
+        /// 삭제
+        /// </summary>
+        Task<bool> DeleteAsync(TIdentifier id);
+
+        /// <summary>
+        /// 필터링
+        /// </summary>
         Task<ArticleSet<T, V>> GetArticlesAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier);
 
         /// <summary>
