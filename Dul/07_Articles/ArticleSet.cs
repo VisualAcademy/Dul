@@ -19,6 +19,11 @@ namespace Dul.Articles
         /// </summary>
         public V TotalCount { get; set; }
 
+        /// <summary>
+        /// 구조체 인스턴스 초기화
+        /// </summary>
+        /// <param name="items">페이지 아티클 리스트</param>
+        /// <param name="totalCount">총 아티클 수</param>
         public ArticleSet(IEnumerable<T> items, V totalCount)
         {
             Items = items;
