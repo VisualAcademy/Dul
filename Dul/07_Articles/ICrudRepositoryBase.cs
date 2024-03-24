@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Dul.Articles
@@ -44,6 +45,11 @@ namespace Dul.Articles
         /// 필터링 관련 메서드 이름 추가: GetArticlesAsync 메서드와 동일 구조 
         /// </summary>
         Task<ArticleSet<T, int>> GetAllAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier);
+
+        /// <summary>
+        /// 필터링: 시작일부터 종료일까지의 데이터 검색
+        /// </summary>
+        Task<ArticleSet<T, int>> GetAllAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier, DateTime from, DateTime to);
     }
 
     /// <summary>
@@ -88,5 +94,10 @@ namespace Dul.Articles
         /// 필터링 관련 메서드 이름 추가: GetArticlesAsync 메서드와 동일 구조 
         /// </summary>
         Task<ArticleSet<T, V>> GetAllAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier);
+
+        /// <summary>
+        /// 필터링: 시작일부터 종료일까지의 데이터 검색
+        /// </summary>
+        Task<ArticleSet<T, V>> GetAllAsync<TParentIdentifier>(int pageIndex, int pageSize, string searchField, string searchQuery, string sortOrder, TParentIdentifier parentIdentifier, DateTime from, DateTime to);
     }
 }
