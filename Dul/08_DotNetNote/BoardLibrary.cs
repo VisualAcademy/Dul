@@ -216,6 +216,7 @@ namespace Dul
         #region DownloadType() 함수
         /// <summary>
         /// 다운로드할 파일의 확장자를 통해 아이콘을 결정. 
+        /// 아이콘 이미지 파일 위치: https://github.com/VisualAcademy/DotNetKorea
         /// </summary>
         /// <param name="strFileName">파일 이름</param>
         /// <param name="altString">alt 메세지로 넣을 문자열</param>
