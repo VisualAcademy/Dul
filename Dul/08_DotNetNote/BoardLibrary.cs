@@ -223,7 +223,7 @@ namespace Dul
         {
             string strFileExt =
                 Path.GetExtension(strFileName).Replace(".", "").ToLower();
-            string r = "";
+            string r;
             switch (strFileExt)
             {
                 case "ace":
