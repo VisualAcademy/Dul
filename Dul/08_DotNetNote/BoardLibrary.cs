@@ -248,7 +248,6 @@ namespace Dul
                 return "-";
             }
         }
-
         #endregion
 
         #region DownloadType() 함수
