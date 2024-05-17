@@ -222,8 +222,17 @@ namespace Dul
         /// <param name="altString">alt 메세지로 넣을 문자열</param>
         public static string DownloadType(string strFileName, string altString, string imgUrl = "/images/ext/")
         {
-            string strFileExt =
-                Path.GetExtension(strFileName).Replace(".", "").ToLower();
+            if (strFileName == null || altString == null)
+            {
+                return string.Empty;
+            }
+
+            string strFileExt = Path.GetExtension(strFileName)?.Replace(".", "").ToLower();
+            if (string.IsNullOrEmpty(strFileExt))
+            {
+                strFileExt = "";
+            }
+
             string r;
             switch (strFileExt)
             {
