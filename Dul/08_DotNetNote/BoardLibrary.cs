@@ -163,11 +163,19 @@ namespace Dul
 
         #region 파일 다운로드 기능
         /// <summary>
-        /// 파일 다운로드 기능
-        /// 주의 : 각 필드에 NULL 값이 들어가면 에러남
+        /// Generates a download link for a single file if the file name is provided; otherwise returns "-".
         /// </summary>
+        /// <param name="id">The ID of the file.</param>
+        /// <param name="strFileName">The name of the file.</param>
+        /// <param name="strFileSize">The size of the file.</param>
+        /// <returns>A string containing the HTML anchor tag for downloading the file, or "-" if any parameter is null or the file name is empty.</returns>
         public static string FuncFileDownSingle(int id, string strFileName, string strFileSize)
         {
+            if (strFileName == null || strFileSize == null)
+            {
+                return "-";
+            }
+
             if (strFileName.Length > 0)
             {
                 return "<a href=\"/DotNetNote/BoardDown.aspx?Id="
@@ -181,8 +189,22 @@ namespace Dul
                 return "-";
             }
         }
+
+        /// <summary>
+        /// Generates a download link for a single file in a specified folder if the file name is provided; otherwise returns "-".
+        /// </summary>
+        /// <param name="id">The ID of the file.</param>
+        /// <param name="strFileName">The name of the file.</param>
+        /// <param name="strFileSize">The size of the file.</param>
+        /// <param name="folder">The folder where the file is located.</param>
+        /// <returns>A string containing the HTML anchor tag for downloading the file, or "-" if any parameter is null or the file name is empty.</returns>
         public static string FuncFileDownSingle(int id, string strFileName, string strFileSize, string folder)
         {
+            if (strFileName == null || strFileSize == null || folder == null)
+            {
+                return "-";
+            }
+
             if (strFileName.Length > 0)
             {
                 return "<a href=\"/" + folder + "/BoardDown.aspx?Id="
@@ -196,8 +218,23 @@ namespace Dul
                 return "-";
             }
         }
+
+        /// <summary>
+        /// Generates a download link for a single file if the file name is provided; otherwise returns "-".
+        /// </summary>
+        /// <param name="id">The ID of the file.</param>
+        /// <param name="strFileName">The name of the file.</param>
+        /// <param name="strFileSize">The size of the file.</param>
+        /// <param name="folder">The folder where the file is located.</param>
+        /// <param name="file">The file path.</param>
+        /// <returns>A string containing the HTML anchor tag for downloading the file, or "-" if any parameter is null or the file name is empty.</returns>
         public static string FuncFileDownSingle(int id, string strFileName, string strFileSize, string folder, string file)
         {
+            if (strFileName == null || strFileSize == null || folder == null || file == null)
+            {
+                return "-";
+            }
+
             if (strFileName.Length > 0)
             {
                 return "<a href=\"/" + folder + "" + file + "?Id="
@@ -211,6 +248,7 @@ namespace Dul
                 return "-";
             }
         }
+
         #endregion
 
         #region DownloadType() 함수
