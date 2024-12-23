@@ -1,4 +1,5 @@
-﻿// 참고: https://docs.microsoft.com/ko-kr/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members
+﻿// 참고: https://learn.microsoft.com/ko-kr/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members
+
 using System;
 
 namespace Dul.Utilities
