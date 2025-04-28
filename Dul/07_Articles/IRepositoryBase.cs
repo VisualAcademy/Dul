@@ -16,7 +16,6 @@ namespace Dul.Articles
         Task<TModel> GetByIdAsync(TIdentifier id); // 상세
         Task<bool> UpdateAsync(TModel model); // 수정
         Task<bool> DeleteAsync(TIdentifier id); // 삭제
-        //Task<bool> DeleteAsync(TModel id); // 삭제
         Task<ArticleSet<TModel, TTotalCount>> GetByAsync<TParentIdentifier>(FilterOptions<TParentIdentifier> options); // 필터링
     }
 }
